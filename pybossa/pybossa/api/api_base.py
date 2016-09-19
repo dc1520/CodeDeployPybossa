@@ -52,9 +52,9 @@ repos = {'Task'   : {'repo': task_repo, 'filter': 'filter_tasks_by',
                      'get': 'get_category', 'save': 'save_category',
                      'update': 'update_category', 'delete': 'delete_category'},
         'CompletedTask' : {'repo': task_repo, 'filter': 'filter_tasks_by', 
-		               'get': 'get_task'},
+                     'get': 'get_task'},
         'CompletedTaskRun' : {'repo': task_repo, 'filter': 'filter_completed_task_runs_by', 
-		               'get': 'get_task_run'}
+                     'get': 'get_task_run'}
         }
 
 
