@@ -40,10 +40,14 @@ class Hateoas(object):
         links = []
         if cls == 'taskrun':
             link = self.create_link(item)
-            if item.project_id is not None:
-                links.append(self.create_link(item.project, rel='parent'))
-            if item.task_id is not None:
-                links.append(self.create_link(item.task, rel='parent'))
+            try:
+                if item.project_id is not None:
+                    links.append(self.create_link(item.project, rel='parent'))
+                if item.task_id is not None:
+                    links.append(self.create_link(item.task, rel='parent'))
+            except:
+                links = None
+                pass
             return links, link
         elif cls == 'task':
             link = self.create_link(item)
